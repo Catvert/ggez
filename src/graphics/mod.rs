@@ -213,7 +213,7 @@ impl From<DrawParam> for InstanceProperties {
 
 /// A structure for conveniently storing Sampler's, based off
 /// their `SamplerInfo`.
-pub(crate) struct SamplerCache<B>
+pub struct SamplerCache<B>
 where
     B: BackendSpec,
 {
