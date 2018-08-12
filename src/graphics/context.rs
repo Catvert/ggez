@@ -79,7 +79,7 @@ where
 }
 
 /// A concrete graphics context for GL rendering.
-pub(crate) type GraphicsContext =
+pub type GraphicsContext =
     GraphicsContextGeneric<GlBackendSpec, <GlBackendSpec as BackendSpec>::SurfaceType>;
 
 impl GraphicsContext {
