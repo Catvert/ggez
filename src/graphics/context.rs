@@ -16,46 +16,46 @@ use graphics::*;
 /// window info, DPI, rendering pipeline state, etc.
 ///
 /// As an end-user you shouldn't ever have to touch this.
-pub(crate) struct GraphicsContextGeneric<B, C>
+pub struct GraphicsContextGeneric<B, C>
 where
     B: BackendSpec<SurfaceType = C>,
     C: gfx::format::Formatted,
 {
-    pub(crate) foreground_color: Color,
-    pub(crate) background_color: Color,
+    pub foreground_color: Color,
+    pub background_color: Color,
     shader_globals: Globals,
     projection: Matrix4,
-    pub(crate) modelview_stack: Vec<Matrix4>,
-    pub(crate) white_image: Image,
-    pub(crate) screen_rect: Rect,
-    pub(crate) dpi: (f32, f32, f32),
-    pub(crate) color_format: gfx::format::Format,
-    pub(crate) depth_format: gfx::format::Format,
+    pub modelview_stack: Vec<Matrix4>,
+    pub white_image: Image,
+    pub screen_rect: Rect,
+    pub dpi: (f32, f32, f32),
+    pub color_format: gfx::format::Format,
+    pub depth_format: gfx::format::Format,
 
-    pub(crate) backend_spec: B,
-    pub(crate) window: sdl2::video::Window,
-    pub(crate) multisample_samples: u8,
+    pub backend_spec: B,
+    pub window: sdl2::video::Window,
+    pub multisample_samples: u8,
     #[allow(dead_code)]
     gl_context: sdl2::video::GLContext,
-    pub(crate) device: Box<B::Device>,
-    pub(crate) factory: Box<B::Factory>,
-    pub(crate) encoder: gfx::Encoder<B::Resources, B::CommandBuffer>,
-    pub(crate) screen_render_target: gfx::handle::RawRenderTargetView<B::Resources>,
+    pub device: Box<B::Device>,
+    pub factory: Box<B::Factory>,
+    pub encoder: gfx::Encoder<B::Resources, B::CommandBuffer>,
+    pub screen_render_target: gfx::handle::RawRenderTargetView<B::Resources>,
     #[allow(dead_code)]
-    pub(crate) depth_view: gfx::handle::RawDepthStencilView<B::Resources>,
+    pub depth_view: gfx::handle::RawDepthStencilView<B::Resources>,
 
-    pub(crate) data: pipe::Data<B::Resources>,
-    pub(crate) quad_slice: gfx::Slice<B::Resources>,
-    pub(crate) quad_vertex_buffer: gfx::handle::Buffer<B::Resources, Vertex>,
+    pub data: pipe::Data<B::Resources>,
+    pub quad_slice: gfx::Slice<B::Resources>,
+    pub quad_vertex_buffer: gfx::handle::Buffer<B::Resources, Vertex>,
 
-    pub(crate) default_sampler_info: texture::SamplerInfo,
-    pub(crate) samplers: SamplerCache<B>,
+    pub default_sampler_info: texture::SamplerInfo,
+    pub samplers: SamplerCache<B>,
 
     default_shader: ShaderId,
-    pub(crate) current_shader: Rc<RefCell<Option<ShaderId>>>,
-    pub(crate) shaders: Vec<Box<ShaderHandle<B>>>,
+    pub current_shader: Rc<RefCell<Option<ShaderId>>>,
+    pub shaders: Vec<Box<ShaderHandle<B>>>,
 
-    pub(crate) glyph_brush: GlyphBrush<'static, B::Resources, B::Factory>,
+    pub glyph_brush: GlyphBrush<'static, B::Resources, B::Factory>,
 }
 
 impl<B, C> GraphicsContextGeneric<B, C>
