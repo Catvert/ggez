@@ -19,7 +19,7 @@ where
     R: gfx::Resources,
 {
     // TODO: Rename to shader_view or such.
-    pub(crate) texture: gfx::handle::RawShaderResourceView<R>,
+    pub texture: gfx::handle::RawShaderResourceView<R>,
     pub(crate) texture_handle: gfx::handle::RawTexture<R>,
     pub(crate) sampler_info: gfx::texture::SamplerInfo,
     pub(crate) blend_mode: Option<BlendMode>,
