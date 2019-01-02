@@ -11,12 +11,14 @@ submit a PR, please!
  * <https://github.com/aprokurov/spaceshooter>
  * <https://github.com/ozkriff/zemeroth>
  * <https://github.com/Swampsoft/solitaire>
+ * <https://github.com/obsoke/rustris>
 
 # Examples/tutorial code
 
  * <https://github.com/ggez/game-template> -- a general-purpose getting-started template integrating warmy, specs, and some other useful tools.
  * <https://github.com/termhn/ggez_snake>
  * <https://github.com/rafaeldelboni/ggez-specs-hello-world> -- A simple hello world project using ggez and specs.
+ * <https://github.com/rafaeldelboni/ggez-specs-rhusics-hello-world> -- A hello world project using ggez, specs and rhusics for physics.
 
 # Tools/add-ons
 
@@ -29,7 +31,6 @@ submit a PR, please!
 
 ## Games
 
- * <https://github.com/obsoke/rustris>
  * <https://rap2hpoutre.github.io/llamassacre-website/> 
 
 ## Examples/tutorial code

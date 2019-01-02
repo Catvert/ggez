@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/ggez/ggez.svg?branch=master)](https://travis-ci.org/ggez/ggez)
 [![Build status](https://ci.appveyor.com/api/projects/status/3v9lsq6n9li7kxim/branch/master?svg=true)](https://ci.appveyor.com/project/svenstaro/ggez/branch/master)
 [![Docs Status](https://docs.rs/ggez/badge.svg)](https://docs.rs/ggez)
-[![license](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ggez/ggez/blob/master/LICENSE)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ggez/ggez/blob/master/LICENSE)
 [![Crates.io](https://img.shields.io/crates/v/ggez.svg)](https://crates.io/crates/ggez)
 [![Crates.io](https://img.shields.io/crates/d/ggez.svg)](https://crates.io/crates/ggez)
 
@@ -76,6 +76,10 @@ Create a new `Context` object with default objects from a `ContextBuilder`
 or `Conf` object, and then call `event::run()` with
 the `Context` and an instance of your `EventHandler` to run your game's
 main loop.
+
+## Getting started
+
+For a quick tutorial on ggez, see the [Hello ggez](https://github.com/ggez/ggez/blob/master/docs/guides/HelloGgez.md) guide in the `docs/` directory.
 
 ## Examples
 
